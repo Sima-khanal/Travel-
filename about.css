@@ -1,0 +1,316 @@
+body {
+  transition: background-color 0.5s, color 0.5s;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #363434;
+  padding: 10px 20px;
+  color: #c9d6b2;
+  position: relative;
+}
+
+.navbar-logo a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navbar-links, .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li a, .nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover, .nav-links li a:hover {
+  color: #BaE5f4;
+}
+
+/* Dark/Light Mode Toggle */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#toggle-icon {
+  width: 44px;
+  height: 40px;
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-links, .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #363434;
+    z-index: 1;
+  }
+
+  .navbar-links li, .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active + .navbar-links {
+    display: flex;
+  }
+
+  /* Make sure dark/light mode toggle is on a new line in mobile view */
+  .toggle-container {
+    margin-top: 10px;
+  }
+}
+
+/* Navbar Active State */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/* General styles for the video-text container */
+.video-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style for each video-text pair */
+.video-text-pair {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  background-color: #f9f9f9; /* Light mode background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Video styling */
+.video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Text section styling */
+.text-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.text-section h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #030313; /* Dark mode text color */
+}
+
+.text-section p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #333; /* Light mode text color */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .video-text-container {
+    flex-direction: row;
+  }
+
+  .video-text-pair {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .video {
+    width: 50%;
+    max-width: none;
+  }
+
+  .text-section {
+    flex: 1;
+  }
+}
+
+/* Dark mode styles */
+body.dark-mode .video-text-container {
+  background-color: #030313; /* Dark mode background */
+}
+
+body.dark-mode .text-section h2,
+body.dark-mode .text-section p {
+  color: #f9f9f9; /* Dark mode text color */
+}
+
+body.dark-mode .video-text-pair {
+  background-color: #111; /* Slightly lighter for contrast */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
+}
+
+/* Post Form Section */
+.post-form {
+  background-color: #f9f9f9; /* Light mode background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  color: #333;
+}
+
+.post-form h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #030313; /* Dark mode text color */
+}
+
+.post-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-form label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #030313; /* Dark mode text color */
+}
+
+.post-form select, 
+.post-form textarea, 
+.post-form input[type="file"] {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.post-form textarea {
+  resize: vertical;
+  width: 100%;
+}
+
+.post-form button {
+  background-color: #f9f9f9; /* Light mode button background */
+  color: #030313; /* Dark mode button text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.post-form button:hover {
+  background-color: #ddd; /* Light mode button hover */
+}
+
+/* Dark Mode Styles for Video and Text Content Section */
+body.dark-mode #video-text-container {
+  background-color: #1e1e1e; /* Dark mode background */
+  color: #e0e0e0; /* Light mode text color for dark background */
+}
+
+body.dark-mode #video-text-container h2 {
+  color: #ffffff; /* Light mode text color for headings */
+}
+
+/* Dark Mode Styles for Newsfeed Section */
+body.dark-mode #newsfeed {
+  background-color: #1e1e1e; /* Dark mode background */
+  color: #e0e0e0; /* Light mode text color for dark background */
+}
+
+body.dark-mode #newsfeed h2 {
+  color: #ffffff; /* Light mode text color for headings */
+}
+
+body.dark-mode #feedContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Dark Mode Styles for Posts */
+body.dark-mode .post-item {
+  background-color: #2a2a2a; /* Dark mode background for individual posts */
+  border: 1px solid #444; /* Dark mode border for posts */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
+}
+
+body.dark-mode .post-item img,
+body.dark-mode .post-item video {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+
+.footer{
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

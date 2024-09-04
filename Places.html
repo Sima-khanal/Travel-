@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <link rel="stylesheet" href="Places.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+   <nav class="navbar">
+    <div class="navbar-logo">
+        <a href="#">TravelExplore</a>
+    </div>
+    <div class="hamburger" id="navbar-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="navbar-links">
+        <li><a href="#" id="home-link">Home</a></li>
+        <li><a href="#" id="about-link" >About</a></li>
+        <li><a href="#" id="Places-link">Places</a></li>
+        <li><a href="#" id="Services-link">Services</a></li>
+        <li><a href="#" id="Pricing-link">Pricing</a></li>
+    </ul>
+    <!-- Dark/Light Mode Toggle -->
+    <div class="toggle-container">
+        <button id="theme-toggle">
+            <img src="https://img.icons8.com/ios-filled/50/000000/moon-symbol.png" alt="Toggle Theme" id="toggle-icon">
+        </button>
+    </div>
+</nav>
+  <!-- Destinations Section -->
+<section class="destinations" id="destinations">
+    <h2>Places & Destinations</h2>
+    <div class="destination-list">
+        <div class="destination-card">
+            <div class="destination-image">
+                <img src="https://i.pinimg.com/236x/37/08/21/37082141c8c6eb75cd81f5d1d740945a.jpg" alt="Destination 1">
+            </div>
+            <div class="destination-text">
+                <h3>Destination 1</h3>
+                <p>A beautiful place with stunning views and lots of activities.</p>
+            </div>
+        </div>
+        <div class="destination-card">
+            <div class="destination-image">
+                <img src="https://i.pinimg.com/236x/fd/af/f8/fdaff852118a200020cbd2fd0575fa3a.jpg" alt="Destination 2">
+            </div>
+            <div class="destination-text">
+                <h3>Destination 2</h3>
+                <p>Experience the local culture and enjoy unique attractions.</p>
+            </div>
+        </div>
+        <div class="destination-card">
+            <div class="destination-image">
+                <img src="https://i.pinimg.com/236x/c0/2b/85/c02b8501c705e12f3e708b594fde981f.jpg" alt="Destination 3">
+            </div>
+            <div class="destination-text">
+                <h3>Destination 3</h3>
+                <p>Relax in a serene environment with breathtaking landscapes.</p>
+            </div>
+        </div>
+        <div class="destination-card">
+            <div class="destination-image">
+                <img src="https://i.pinimg.com/236x/6a/a8/fd/6aa8fd0a734e82e211975aaafe2d8f5f.jpg" alt="Destination 4">
+            </div>
+            <div class="destination-text">
+                <h3>Destination 4</h3>
+                <p>Explore historical sites and immerse yourself in history.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <section class="contact-map-container" id="contact">
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="4cc9ce67-76bd-452d-b651-bed1bf6b2ff1">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14184.96555634288!2d85.3629143!3d27.7561785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb183a427b0bcf%3A0x452dbe0d7dc4b7f!2sBaluddhar%20School%2C%20Kapan%2C%20Milanchowk%2C%20Nepal!5e0!3m2!1sen!2snp!4v1695851269621!5m2!1sen!2snp"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+
+    
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Travelogue. All rights reserved.</p>
+        </footer>
+    <script src="Places.js"></script>
+</body>
+</html>

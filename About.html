@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+     <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="#">TravelExplore</a>
+        </div>
+        <div class="hamburger" id="navbar-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#" id="home-link">Home</a></li>
+            <li><a href="#" id="about-link">About</a></li>
+            <li><a href="#" id="Places-link">Places</a></li>
+            <li><a href="#" id="Services-link">Services</a></li>
+            <li><a href="#" id="Pricing-link">Pricing</a></li>
+        </ul>
+        <!-- Dark/Light Mode Toggle -->
+        <div class="toggle-container">
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                <img src="https://img.icons8.com/ios-filled/50/000000/moon-symbol.png" alt="Toggle Theme" id="toggle-icon">
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Video and Text Sections -->
+    <section class="video-text-container">
+        <div class="video-text-pair">
+            <video controls class="video" aria-label="Video of Godawari">
+                <source src="Godawari.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="text-section">
+                <h2>Watch Our Story: Godawari</h2>
+                <p>Discover the beauty of Godawari, its lush landscapes, and serene environment. This video showcases the stunning scenery and tranquil atmosphere that makes Godawari a must-visit destination.</p>
+            </div>
+        </div>
+        <div class="video-text-pair">
+            <video controls class="video" aria-label="Video of Scon">
+                <source src="Scon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="text-section">
+                <h2>Watch Our Story: Scon</h2>
+                <p>Experience the vibrant culture and rich history of Scon. Our video takes you through the heart of this dynamic region, highlighting its unique traditions and way of life.</p>
+            </div>
+        </div>
+    </section>
+
+<section class="post-form">
+    <h2>Post to Newsfeed</h2>
+    <form id="postForm">
+        <label for="contentType">Choose Content Type:</label>
+        <select id="contentType" name="contentType">
+            <option value="text">Quote</option>
+            <option value="image">Image</option>
+            <option value="video">Video</option>
+        </select>
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" rows="4" cols="50" required></textarea>
+        <label for="fileInput">Choose a file:</label>
+        <input type="file" id="fileInput" name="fileInput">
+        <button type="submit">Post</button>
+    </form>
+</section>
+
+<section id="newsfeed">
+    <h2>Newsfeed</h2>
+    <div id="feedContent"></div>
+</section>
+
+<footer>
+    <div class="footer" id="footer"> 9823900684 || seemakhanal608@gmail.com </div></footer>
+
+
+<script src="about.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+
+/* styles.css */
+
+body {
+  transition: background-color 0.5s, color 0.5s;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: #ffffff;
+}
+
+.navbar-logo a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #BaE5f4;
+}
+
+/* Dark/Light Mode Toggle Styles */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#toggle-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Section Styles */
+section {
+  padding: 20px;
+  margin: 10px 0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #191a21;
+  color: #ffffff;
+}
+
+.navbar.dark-mode {
+  background-color: #222;
+}
+
+.navbar-links li a.dark-mode {
+  color: #f3ecde;
+}
+
+.navbar-links li a.dark-mode:hover {
+  color: #E2d2fe;
+}
+
+/* Default light mode styles */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  --background-color: #191a21;
+  --text-color: #ffffff;
+}
+
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+}
+
+.about-content, .contact-form {
+  margin-top: 20px;
+}
+
+.contact-form form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+/* styles.css */
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #BaE5f4; 
+  margin: 20px 0;
+  color: rgb(26, 25, 25);
+}
+
+h1, h2 {
+  color: #191a21;
+  background-color: #dda0a0;
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: #E2d2fe; 
+  color:#241f1f;
+  border-radius: 8px;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeline-item {
+  background-color: #ffffff;
+  padding: 10px;
+  border-left: 5px solid #191a21;
+  transition: background-color 0.3s;
+}
+
+.timeline-item:hover {
+  background-color: #BaE5f4; /* Change background on hover */
+  color: #130f0f;
+}
+
+.team-member {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  margin: 10px;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 5px solid #191a21;
+  margin: 10px 0;
+  padding-left: 10px;
+}
+
+details {
+  background-color: #241f1f;
+  color:#BaE5f4;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.cta {
+  text-align: center;
+}
+
+.cta button {
+  padding: 10px 20px;
+  background-color: #191a21;
+  color: #dda0a0;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.post-form, #newsfeed {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.feed-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.feed-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #BaE5f4;
+  color:#241f1f;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .timeline-container {
+      flex-direction: column;
+  }
+}

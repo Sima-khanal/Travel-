@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+            <nav class="navbar">
+                <div class="navbar-logo">
+                    <a href="#">TravelExplore</a>
+                </div>
+                <div class="hamburger" id="navbar-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="navbar-links">
+                    <li><a href="#" id="home-link">Home</a></li>
+                    <li><a href="#" id="about-link" >About</a></li>
+                    <li><a href="#" id="Places-link">Places</a></li>
+                    <li><a href="#" id="Services-link">Services</a></li>
+                    <li><a href="#" id="Pricing-link">Pricing</a></li>
+                </ul>
+                <!-- Dark/Light Mode Toggle -->
+        <div class="toggle-container">
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                <img src="https://img.icons8.com/ios-filled/50/000000/moon-symbol.png" alt="Toggle Theme" id="toggle-icon">
+            </button>
+        </div>
+    </nav>
+            </nav>
+        <nav class="navbar1">
+                <div class="Date-Time" id="datetime">
+                    <!-- Date and Time will be displayed here -->
+                </div>
+                <div class="hamburger" id="navbar-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            <ul class="nav-links">
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#review">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Explore the World's Best Destinations</h1>
+            <p>Find your next adventure with our curated travel destinations. </p>
+            <a href="#destinations" class="btn">Discover More</a>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Featured Destinations</h2>
+            <div class="destination-list">
+                <!-- Destination items will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Travel Gallery</h2>
+            <div class="gallery-grid">
+              <img src="https://i.pinimg.com/236x/48/b0/03/48b0030f2d756c80193fde12bd2b4de4.jpg">
+              <img src="https://i.pinimg.com/236x/4d/76/0e/4d760e0f9f95e1197da97aa89c278a32.jpg">
+              <img src="https://i.pinimg.com/236x/d0/b4/ad/d0b4ad0e00aa926802c1f1d0fceb0554.jpg">
+              <img src="https://i.pinimg.com/236x/62/95/c1/6295c1ccf81e0c4a55ec05631fcf5e43.jpg">
+              <img src="https://i.pinimg.com/236x/02/16/e0/0216e077344742419c3f40adddac9daa.jpg">
+              <img src="https://i.pinimg.com/236x/54/28/2b/54282ba1813c599836c2bac79aba91ba.jpg">
+              <img src="https://i.pinimg.com/236x/72/a8/6b/72a86bd791199110969690f8d3028c21.jpg">
+              <img src="https://i.pinimg.com/236x/10/26/12/102612e9314969779fe11e229f6827a0.jpg">
+              <img src="https://i.pinimg.com/236x/d9/31/ce/d931ce1a95499360d3da83f20f611ddb.jpg">
+              <img src="https://i.pinimg.com/236x/dd/eb/16/ddeb162dde57914fa124500c74a8f836.jpg">
+                <!-- Image gallery items -->
+            </div>
+        </div>
+    </section>
+
+    <div class="review-container" id="review">
+        <h2>Leave a Review</h2>
+        <form id="reviewForm">
+            <input type="text" id="reviewerName" placeholder="Your Name" required>
+            <textarea id="reviewText" placeholder="Your Review" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+        
+        <h2>Reviews</h2>
+        <div id="reviewList"></div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Booking Inquiry</h2>
+            <form id="booking-form" action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="4cc9ce67-76bd-452d-b651-bed1bf6b2ff1">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="destination">Destination</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <label for="date">Travel Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer" id="footer"> 9823900684 || seemakhanal608@gmail.com </div></footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+/* Basic Reset */
+body {
+  transition: background-color 0.5s, color 0.5s;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #363434;
+  padding: 10px 20px;
+  color: #c9d6b2;
+  position: relative;
+}
+
+.navbar-logo a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navbar-links, .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li a, .nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover, .nav-links li a:hover {
+  color: #BaE5f4;
+}
+
+/* Dark/Light Mode Toggle */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#toggle-icon {
+  width: 44px;
+  height: 40px;
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Navbar */
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center; /* Center the content */
+  }
+
+  .navbar-logo {
+    position: absolute;
+    left: 20px;
+  }
+
+  .toggle-container {
+    position: absolute;
+    right: 20px;
+  }
+
+  .navbar-links, .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #363434;
+    z-index: 1;
+  }
+
+  .navbar-links li, .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hamburger + .navbar-links {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+    
+    .hamburger.active + .navbar-links {
+      display: flex;
+    }
+  }
+  
+  /* Hover Effect for Navbar */
+  .hamburger:hover + .navbar-links, .hamburger:hover + .nav-links {
+    display: flex;
+  }
+}
+
+/* Dark Mode Variables */
+:root {
+  --bg-color-light: #f4f4f4;
+  --bg-color-dark: #1e1e1e;
+  --text-color-light: #a09a9a;
+  --text-color-dark: #e2e2e2;
+  --border-color-light: #ddd;
+  --border-color-dark: #444;
+  --btn-bg-color-light: #007BFF;
+  --btn-bg-color-dark: #0056b3;
+  --btn-text-color-light: #ffffff;
+  --btn-text-color-dark: #ffffff;
+}
+
+
+body.dark-mode .destinations {
+  background-color: #333;
+}
+
+body.dark-mode .destination-card {
+  background-color: #555;
+  border-color: var(--border-color-dark);
+}
+
+body.dark-mode .destination-text {
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .contact-form {
+  background-color: #222;
+}
+
+body.dark-mode .contact-form input, 
+body.dark-mode .contact-form textarea {
+  background-color: #333;
+  color: var(--text-color-dark);
+  border-color: var(--border-color-dark);
+}
+
+body.dark-mode .contact-form button {
+  background-color: var(--btn-bg-color-dark);
+  color: var(--btn-text-color-dark);
+}
+
+body.dark-mode .contact-form button:hover {
+  background-color: #004494;
+}
+
+body.dark-mode .footer {
+  background-color: #444;
+}
+
+
+.destinations {
+  background-color: var(--bg-color-light);
+}
+
+.destination-card {
+  background-color: #fff;
+  border-color: var(--border-color-light);
+}
+
+.destination-text {
+  color: var(--text-color-light);
+}
+
+.contact-form {
+  background-color: #f9f9f9;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  background-color: #fff;
+  color: var(--text-color-light);
+  border-color: var(--border-color-light);
+}
+
+.contact-form button {
+  background-color: var(--btn-bg-color-light);
+  color: var(--btn-text-color-light);
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #333;
+}
+
+
+/* Destinations Section */
+.destinations {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.destinations h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.destination-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.destination-card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid var(--border-color-light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.destination-image {
+  flex: 1;
+}
+
+.destination-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.destination-text {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.destination-text h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.destination-text p {
+  margin: 0;
+  font-size: 16px;
+}
+
+
+  .destination-card {
+    flex-direction: column;
+  }
+
+
+.contact-map-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color-light);
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.map-container {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Footer Styles */
+.footer {
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
